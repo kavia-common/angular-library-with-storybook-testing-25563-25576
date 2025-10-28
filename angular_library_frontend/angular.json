@@ -101,6 +101,27 @@
           }
         }
       }
+    },
+    "figma86-ui": {
+      "projectType": "library",
+      "root": "projects/figma86-ui",
+      "sourceRoot": "projects/figma86-ui/src",
+      "prefix": "f86",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/figma86-ui/ng-package.json",
+            "tsConfig": "projects/figma86-ui/tsconfig.lib.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/figma86-ui/tsconfig.spec.json"
+          }
+        }
+      }
     }
   },
   "cli": {

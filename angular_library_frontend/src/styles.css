@@ -1,3 +1,5 @@
+@import '../projects/figma86-ui/src/lib/styles/tokens.scss';
+
 /* Global styles for minimalistic design */
 * {
   margin: 0;
@@ -7,6 +9,7 @@
 
 html, body {
   height: 100%;
-  background-color: #ffffff;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--ocn-background);
+  color: var(--ocn-text);
+  font-family: var(--font-family-base);
 }
