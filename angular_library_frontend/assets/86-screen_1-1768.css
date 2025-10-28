@@ -1,0 +1,6 @@
+#node-1-1769, #node-1-1795, #node-1-1829 { z-index: 1; }
+#node-1-1795 { z-index: 2; }
+#node-1-1829 { z-index: 3; }
+
+/* Ensure pixel precision */
+.fig-screen * { image-rendering: -webkit-optimize-contrast; }
