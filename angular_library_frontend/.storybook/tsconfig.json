@@ -1,0 +1,25 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "types": [
+      "node",
+      "storybook__addons",
+      "storybook__angular"
+    ],
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "module": "ES2022",
+    "target": "ES2022",
+    "moduleResolution": "bundler",
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "../src/test.ts",
+    "../**/*.spec.ts"
+  ],
+  "include": [
+    "../src/**/*.stories.ts",
+    "../projects/**/*.stories.ts",
+    "./**/*.ts"
+  ]
+}
