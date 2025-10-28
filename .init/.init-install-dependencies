@@ -1,0 +1,4 @@
+{
+    "command": "npm install --legacy-peer-deps",
+    "working_directory": "/home/kavia/workspace/code-generation/angular-library-with-storybook-testing-25563-25576/angular_library_frontend"
+}
