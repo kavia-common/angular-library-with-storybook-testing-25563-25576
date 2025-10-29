@@ -8,10 +8,14 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:angular": "node dist/angular/server/server.mjs",
-    "storybook": "storybook dev -p 6006 --quiet",
-    "build-storybook": "storybook build"
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "build:lib": "ng build figma86-ui"
   },
   "private": true,
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
     "@angular/cdk": "19.2.0",
     "@angular/common": "19.2.0",
@@ -53,7 +57,6 @@
     "@storybook/addon-interactions": "8.6.14",
     "@storybook/addon-links": "8.6.14",
     "@storybook/addon-a11y": "8.6.14",
-
     "storybook": "8.6.14",
     "ts-node": "10.9.2"
   }
