@@ -1,28 +1,45 @@
 import type { Preview } from '@storybook/angular';
 
-// PUBLIC_INTERFACE
-export const parameters: Preview['parameters'] = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/i,
+// Import Ocean Professional tokens and base styles globally so all stories render with the theme.
+// We import directly from the library source to leverage Angular's builder and Webpack style handling.
+import '../projects/figma86-ui/src/lib/styles/tokens.scss';
+import '../projects/figma86-ui/src/lib/styles/_base.scss';
+
+const preview: Preview = {
+  parameters: {
+    // Minimalist backgrounds using Ocean Professional palette
+    backgrounds: {
+      default: 'Surface',
+      values: [
+        { name: 'Background', value: '#FFFFFF' },  // $ocn-background
+        { name: 'Surface', value: '#F9FAFB' },     // $ocn-surface
+        { name: 'Slate', value: '#374151' },       // $ocn-primary
+        { name: 'Gray', value: '#9CA3AF' },        // $ocn-secondary
+      ],
     },
-    expanded: true,
-    sort: 'alpha',
-  },
-  options: {
-    storySort: {
-      order: ['Introduction', 'Components', 'Pages'],
+    // Keep layout centered to highlight minimalist components with generous whitespace
+    layout: 'centered',
+    // Docs theme preferences (keep clean UI)
+    options: {
+      storySort: {
+        order: ['Figma86 UI', ['OpButton', '*'], '*'],
+      },
+    },
+    docs: {
+      canvas: { sourceState: 'shown' },
+      source: {
+        language: 'ts',
+        type: 'auto',
+      },
+      toc: {
+        headingSelector: 'h2, h3',
+      },
+    },
+    // Controls settings to keep UI minimal
+    controls: {
+      expanded: false,
     },
   },
 };
 
-// Placeholder: apply global theme tokens for Ocean Professional across stories.
-// You can import global styles or inject CSS variables for tokens here.
-// Example (uncomment and adjust when tokens are available):
-// import '../src/styles.css';
-// Or if tokens are in the library:
-// import '../projects/figma86-ui/src/lib/styles/tokens.scss';
-
-export default { parameters };
+export default preview;
