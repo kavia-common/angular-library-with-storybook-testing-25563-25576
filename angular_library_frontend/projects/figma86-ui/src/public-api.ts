@@ -11,4 +11,5 @@
   enabling consumers to import SCSS directly by the concise path above.
   No runtime JS export is required for SCSS; documentation here is for developer experience.
 */
-export {};
+
+export * from './lib/op-button';
