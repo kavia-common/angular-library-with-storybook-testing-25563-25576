@@ -6,5 +6,6 @@
     "styleIncludePaths": [
       "src/lib/styles"
     ]
-  }
+  },
+  "allowedNonPeerDependencies": []
 }

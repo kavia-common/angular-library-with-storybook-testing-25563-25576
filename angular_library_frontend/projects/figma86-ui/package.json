@@ -1,14 +1,35 @@
 {
   "name": "figma86-ui",
   "version": "0.0.1",
+  "description": "Ocean Professional themed Angular Material component library.",
+  "private": false,
+  "sideEffects": false,
+  "license": "MIT",
   "peerDependencies": {
     "@angular/core": "19.2.0",
     "@angular/common": "19.2.0",
     "@angular/forms": "19.2.0",
+    "@angular/platform-browser": "19.2.0",
+    "@angular/platform-browser-dynamic": "19.2.0",
     "@angular/material": "19.2.0",
-    "@angular/cdk": "19.2.0"
+    "@angular/cdk": "19.2.0",
+    "rxjs": "7.8.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
+  },
+  "module": "fesm2022/figma86-ui.mjs",
+  "es2022": "fesm2022/figma86-ui.mjs",
+  "typings": "index.d.ts",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "esm2022": "./fesm2022/figma86-ui.mjs",
+      "default": "./fesm2022/figma86-ui.mjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
