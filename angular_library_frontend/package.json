@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:angular": "node dist/angular/server/server.mjs",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 6006 --quiet",
     "build-storybook": "storybook build"
   },
   "private": true,

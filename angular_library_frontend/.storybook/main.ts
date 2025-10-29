@@ -1,22 +1,31 @@
 import type { StorybookConfig } from '@storybook/angular';
 
 const config: StorybookConfig = {
-  framework: '@storybook/angular',
+  framework: {
+    name: '@storybook/angular',
+    options: {},
+  },
+  core: {
+    builder: 'webpack5',
+  },
   stories: [
-    '../src/**/*.stories.@(ts|mdx)',
-    '../projects/**/*.stories.@(ts|mdx)'
+    // Scope stories to the library; adjust or extend as new packages are added
+    '../projects/figma86-ui/src/**/*.stories.@(ts|mdx)',
   ],
   addons: [
-    '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
-    '@storybook/addon-a11y'
+    '@storybook/addon-links',
+    '@storybook/addon-a11y',
   ],
-  core: {
-    builder: '@storybook/angular-builder'
-  },
   docs: {
-    defaultName: 'Docs',
-  }
+    autodocs: 'tag',
+  },
+  typescript: {
+    // Let Storybook manage type checking where needed
+    check: false,
+    reactDocgen: false,
+  },
 };
+
 export default config;
